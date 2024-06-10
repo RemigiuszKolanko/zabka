@@ -1,0 +1,174 @@
+[
+    {
+      "projects": [
+        {
+          "name": "Highway Controller",
+          "builds": [
+            {
+              "id": 10,
+              "start": "Thu Jun 22 2023 09:03:37 GMT+0200",
+              "result": "SUCCESS",
+              "steps": [
+                {
+                  "name": "Checkout",
+                  "dependsOn": [],
+                  "duration": 60,
+                  "result": "SUCCESS"
+                },
+                {
+                  "name": "Build",
+                  "dependsOn": ["Checkout"],
+                  "duration": 921,
+                  "result": "SUCCESS"
+                },
+                {
+                  "name": "Unittest",
+                  "dependsOn": ["Build"],
+                  "duration": 120,
+                  "result": "SUCCESS"
+                },
+                {
+                  "name": "Integration Test",
+                  "dependsOn": ["Build"],
+                  "duration": 220,
+                  "result": "SUCCESS"
+                },
+                {
+                  "name": "Reporting",
+                  "dependsOn": ["Unittest", "Integration Test"],
+                  "duration": 20,
+                  "result": "SUCCESS"
+                }
+              ]
+            },
+            {
+              "id": 9,
+              "start": "Thu Jun 20 2023 16:03:37 GMT+0200",
+              "result": "SUCCESS",
+              "steps": [
+                {
+                  "name": "Checkout",
+                  "dependsOn": [],
+                  "duration": 25,
+                  "result": "SUCCESS"
+                },
+                {
+                  "name": "Build",
+                  "dependsOn": ["Checkout"],
+                  "duration": 50,
+                  "result": "SUCCESS"
+                }
+              ]
+            },
+            {
+              "id": 8,
+              "start": "Thu Jun 20 2023 15:03:37 GMT+0200",
+              "result": "SUCCESS",
+              "steps": [
+                {
+                  "name": "Checkout",
+                  "dependsOn": [],
+                  "duration": 25,
+                  "result": "SUCCESS"
+                },
+                {
+                  "name": "Build",
+                  "dependsOn": ["Checkout"],
+                  "duration": 50,
+                  "result": "SUCCESS"
+                }
+              ]
+            },
+            {
+              "id": 7,
+              "start": "Thu Jun 20 2023 14:03:37 GMT+0200",
+              "result": "UNSTABLE",
+              "steps": [
+                {
+                  "name": "Checkout",
+                  "dependsOn": [],
+                  "duration": 25,
+                  "result": "SUCCESS"
+                },
+                {
+                  "name": "Build",
+                  "dependsOn": ["Checkout"],
+                  "duration": 50,
+                  "result": "UNSTABLE"
+                }
+              ]
+            },
+            {
+              "id": 6,
+              "start": "Thu Jun 20 2023 13:03:37 GMT+0200",
+              "result": "SUCCESS",
+              "steps": [
+                {
+                  "name": "Checkout",
+                  "dependsOn": [],
+                  "duration": 25,
+                  "result": "SUCCESS"
+                },
+                {
+                  "name": "Build",
+                  "dependsOn": ["Checkout"],
+                  "duration": 50,
+                  "result": "SUCCESS"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CAN-Adapter",
+          "builds": [
+            {
+              "id": 2,
+              "start": "Thu Jun 21 2023 15:03:37 GMT+0200",
+              "result": null,
+              "steps": [
+                {
+                  "name": "Checkout",
+                  "dependsOn": [],
+                  "duration": 20,
+                  "result": "SUCCESS"
+                },
+                {
+                  "name": "Build",
+                  "dependsOn": ["Checkout"],
+                  "duration": 50,
+                  "result": "SUCCESS"
+                },
+                {
+                  "name": "Test Generation",
+                  "dependsOn": ["Build"],
+                  "duration": 40,
+                  "result": null
+                }
+              ]
+            },
+            {
+              "id": 1,
+              "start": "Thu Jun 21 2023 14:03:37 GMT+0200",
+              "result": "FAILURE",
+              "steps": [
+                {
+                  "name": "Checkout",
+                  "dependsOn": [],
+                  "duration": 20,
+                  "result": "SUCCESS"
+                },
+                {
+                  "name": "Build",
+                  "dependsOn": ["Checkout"],
+                  "duration": 50,
+                  "result": "FAILURE"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  
